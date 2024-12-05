@@ -1,0 +1,6 @@
+name=playdate-particles-lab
+author=matheusnicolas
+description=Particles lab playground to test particles system with glitterbomb
+bundleID=com.matheusnicolas.pd-particles-playground
+version=1.0
+buildNumber=1
