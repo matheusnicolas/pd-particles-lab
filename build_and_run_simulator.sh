@@ -3,7 +3,7 @@
 echo "Compiling and building project..."
 echo ""
 
-pdc src builds/particles-lab
+pdc source builds/particles-lab
 
 PLAYDATE_SDK_SIMULATOR_PATH="/Developer/PlaydateSDK-2.6.0/bin/Playdate Simulator.app"
 

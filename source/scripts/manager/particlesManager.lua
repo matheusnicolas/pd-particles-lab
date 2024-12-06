@@ -6,11 +6,13 @@ ParticlesManager = {}
 local particles = {}
 local currentSpawner = nil
 local currentParticle = "initial"
+local snowImagetable = gfx.imagetable.new("assets/images/snow-effect")
 
 local particlesTable = {
     ["example-1"] = 1,
     ["example-2"] = 2,
-    ["example-3"] = 3
+    ["example-3"] = 3,
+    ["example-4"] = 4,
 }
 
 local append = table.insert
@@ -20,6 +22,7 @@ function ParticlesManager.init()
     ParticlesManager.slotMachineParticle()
     ParticlesManager.multiplyParticle()
     ParticlesManager.cardDestroyedParticle()
+    ParticlesManager.snowParticle()
 end
 
 function ParticlesManager.update()
@@ -99,4 +102,19 @@ function ParticlesManager.cardDestroyedParticle()
     filledSquare:setInheritVelocity(false)
     filledSquare:setParticleSize(14, 0)
     append(particles, filledSquare)
+end
+
+function ParticlesManager.snowParticle()
+    local snow = AnimatedParticleEmitter.new(snowImagetable)
+    snow:setNumFrames(14)
+    snow:setEmissionRate(0)
+    snow:setParticleLifetime(.5)
+    snow:setParticleUpdateDelay(1)
+    snow:setEmissionForce(0)
+    snow:setEmitterWidth(0)
+    snow:setEmissionSpread(0)
+    snow:setEmissionAngle(0)
+    snow:setGravity(0)
+    snow:setInheritVelocity(false)
+    append(particles, snow)
 end

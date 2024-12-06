@@ -17,6 +17,8 @@ function InputManager:update()
         ParticlesManager.emit(200, 120, 12, "example-2")
     elseif pd.buttonJustPressed(pd.kButtonDown) then
         ParticlesManager.emit(200, 120, 5, "example-3")
+    elseif pd.buttonJustPressed(pd.kButtonRight) then
+        ParticlesManager.emit(200, 120, 5, "example-4")
     elseif pd.buttonJustPressed(pd.kButtonA) then
         if darkMode then
             gfx.setBackgroundColor(gfx.kColorWhite)
