@@ -1,11 +1,12 @@
 local pd = playdate
 local gfx = pd.graphics
+local darkMode = true
+local toggleButtonInstance = nil
 
 class('InputManager').extends(gfx.sprite)
 
-local darkMode = true
-
 function InputManager:init()
+    toggleButtonInstance = ToggleButton()
     self:add()
 end
 
@@ -23,5 +24,6 @@ function InputManager:update()
             gfx.setBackgroundColor(gfx.kColorBlack)
         end
         darkMode = not darkMode
+        toggleButtonInstance:changeMode(darkMode)
     end
 end

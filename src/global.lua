@@ -8,10 +8,14 @@ import "CoreLibs/animation"
 
 -- libraries
 import "scripts/libraries/glitterbomb"
+import "scripts/libraries/AnimatedSprite"
 
 -- manager
 import "scripts/manager/particlesManager"
 import "scripts/manager/inputManager"
+
+-- ui
+import "scripts/ui/toggleButton"
 
 delta = 0
 lastTime = 0

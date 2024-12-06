@@ -5,5 +5,12 @@
 ## Features
 
 - A playground for testing different particle effects.
-- Uses the **Glitterbomb** library to generate and manage particle systems.
+- Uses the **[Glitterbomb]([https://github.com/manaliveadam/glitterbomb])** library to generate and manage particle systems.
 - Designed for the Playdate SDK.
+
+## Commands
+
+- **A** button toggle between light and dark mode.
+- **D-pad** emits the particles.
+
+![Alt text](https://raw.githubusercontent.com/matheusnicolas/readme-images/refs/heads/master/pd-lab.gif)
